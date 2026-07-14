@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #222;
+}
+
+/* Navigation bar */
+.navbar {
+    background: rgba(230, 230, 230, 0.93) !important;
+    backdrop-filter: blur(28px);
+    border-bottom: 3px solid rgba(139, 0, 0, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-brand {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+/* landscape buttons */
+.landscape-btn {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(139, 0, 0, 0.5);
+    border-radius: 24px;
+    padding: 40px 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+    .landscape-btn:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+/* item Cards */
+.product-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 520px;
+}
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 22px 45px rgba(139, 0, 0, 0.22);
+    }
+
+/* preview */
+.preview-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-image,
+.product-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.product-video {
+    opacity: 0;
+}
+
+.product-card:hover .product-image {
+    opacity: 0;
+}
+
+.product-card:hover .product-video {
+    opacity: 1;
+}
+
+/* card */
+.product-card .card-body {
+    padding: 25px 25px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card .card-title {
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 25px;
+}
+
+.product-card button {
+    margin-top: auto !important;
+}
+
+/* Price and buttons */
+.price {
+    color: #8B1E1E;
+    font-weight: 700;
+    font-size: 1.55rem;
+}
+
+.btn-primary {
+    background: #8B1E1E;
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 12px 24px;
+}
+
+    .btn-primary:hover {
+        background: #6B1A1A;
+        transform: scale(1.05);
+    }
+
+/* footer */
+footer {
+    background: rgba(60, 20, 20, 0.95);
+    color: #f8f9fa;
+    border-top: 3px solid #D4AF55;
+}
+/* Greek Banner */
+.about-banner {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    .about-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* about text */
+.about-text-box {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px;
+    border-top: 6px solid #8B1E1E;
+    padding: 40px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #222222 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+    .about-text-box p {
+        color: #222222 !important;
+    }
