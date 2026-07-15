@@ -8,16 +8,14 @@ body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     color: #222;
-    padding-top: 80px; /* Space for fixed navbar */
 }
 
 /* Navigation bar */
 .navbar {
-    background: rgba(230, 230, 230, 0.95) !important;
+    background: rgba(230, 230, 230, 0.93) !important;
     backdrop-filter: blur(28px);
     border-bottom: 3px solid rgba(139, 0, 0, 0.35);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-    z-index: 1030;
 }
 
 .navbar-brand {
@@ -25,49 +23,27 @@ body {
     font-weight: 800;
 }
 
-/* Hero Section */
-.hero {
-    background-size: cover;
-    background-position: center;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-}
-
-/* Landscape Buttons */
+/* landscape buttons */
 .landscape-btn {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
     border: 2px solid rgba(139, 0, 0, 0.5);
     border-radius: 24px;
-    padding: 45px 25px;
+    padding: 40px 25px;
     text-align: center;
     transition: all 0.4s ease;
     height: 100%;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    color: #222;
 }
 
-.landscape-btn:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.98);
-    text-decoration: none;
-}
+    .landscape-btn:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.95);
+    }
 
-/* Product Cards */
+/* item Cards */
 .product-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(139, 0, 0, 0.3);
     border-radius: 22px;
@@ -77,15 +53,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 520px;
-    cursor: pointer;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 45px rgba(139, 0, 0, 0.25);
-}
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 22px 45px rgba(139, 0, 0, 0.22);
+    }
 
-/* Preview Video Hover */
+/* preview */
 .preview-wrapper {
     position: relative;
     width: 100%;
@@ -117,7 +92,7 @@ body {
     opacity: 1;
 }
 
-/* Card Content */
+/* card */
 .product-card .card-body {
     padding: 25px 25px 40px;
     display: flex;
@@ -127,7 +102,6 @@ body {
 
 .product-card .card-title {
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
 .product-card .card-text {
@@ -135,48 +109,48 @@ body {
     margin-bottom: 25px;
 }
 
-/* Price */
+.product-card button {
+    margin-top: auto !important;
+}
+
+/* Price and buttons */
 .price {
     color: #8B1E1E;
     font-weight: 700;
     font-size: 1.55rem;
 }
 
-/* Buttons */
 .btn-primary {
     background: #8B1E1E;
-    border: none;
     border-radius: 50px;
     font-weight: 600;
     padding: 12px 24px;
-    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background: #6B1A1A;
-    transform: scale(1.05);
-}
+    .btn-primary:hover {
+        background: #6B1A1A;
+        transform: scale(1.05);
+    }
 
-.btn-success {
-    background: #28a745;
-}
-
-/* Footer (if needed later) */
+/* footer */
 footer {
     background: rgba(60, 20, 20, 0.95);
     color: #f8f9fa;
     border-top: 3px solid #D4AF55;
-    padding: 40px 0;
-    margin-top: 80px;
 }
-
-/* About Page Specific */
-.about-banner img {
+/* Greek Banner */
+.about-banner {
     width: 100%;
-    height: auto;
-    display: block;
+    margin-bottom: 30px;
 }
 
+    .about-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* about text */
 .about-text-box {
     background: rgba(255, 255, 255, 0.95) !important;
     border-radius: 15px;
@@ -187,3 +161,7 @@ footer {
     color: #222222 !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+    .about-text-box p {
+        color: #222222 !important;
+    }
