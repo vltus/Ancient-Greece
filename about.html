@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">🏛️ Ancient Greece</a>
             <div class="ms-auto">
-                <a href="index.html" class="btn btn-outline-dark me-2">Home</a>
-                <a href="shop.html" class="btn btn-outline-dark me-2">Shop Episodes</a>
-                <a href="cart.html" class="btn btn-outline-danger position-relative">
-                    🛒 Cart <span id="cart-count" class="badge bg-danger">0</span>
-                </a>
-                <a href="my-library.html" class="btn btn-outline-success ms-2">My Library</a>
+                <a href="about.html" class="btn btn-outline-dark me-2">About</a>
+                <a href="episodes.html" class="btn btn-outline-danger">Episodes</a>
             </div>
         </div>
     </nav>
+
+    <div class="nav-spacer"></div>
 
     <!-- Greek banner -->
     <div class="about-banner">
@@ -29,7 +28,7 @@
     </div>
 
     <div class="container my-5">
-        <!-- About Text Box -->
+        <!-- About Text Box with black text -->
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="about-text-box p-5">
@@ -40,7 +39,7 @@
 
         <!-- Explore What's Included -->
         <h2 class="text-center mb-5 fw-bold mt-5">Explore what's included:</h2>
-       
+
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="product-card">
@@ -51,7 +50,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="col-lg-4 col-md-6">
                 <div class="product-card">
                     <img src="images/acropolis.png" class="card-img-top" alt="Acropolis">
@@ -61,7 +60,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="col-lg-4 col-md-6">
                 <div class="product-card">
                     <img src="images/trojan-horse.png" class="card-img-top" alt="Trojan Horse">
@@ -74,15 +73,13 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 The Wonders of Ancient Greece &mdash; part of <a href="https://tobyhall.uk" class="text-warning text-decoration-none">tobyhall.uk</a></p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Update cart count
-        function updateCartCount() {
-            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-            const countEl = document.getElementById('cart-count');
-            if (countEl) countEl.textContent = cart.length;
-        }
-        updateCartCount();
-    </script>
 </body>
 </html>

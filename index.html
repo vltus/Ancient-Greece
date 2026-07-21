@@ -8,23 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">🏛️ Ancient Greece</a>
             <div class="ms-auto">
-                <a href="shop.html" class="btn btn-outline-dark me-2">Shop Episodes</a>
-                <a href="cart.html" class="btn btn-outline-danger position-relative">
-                    🛒 Cart <span id="cart-count" class="badge bg-danger">0</span>
-                </a>
+                <a href="about.html" class="btn btn-outline-dark me-2">About</a>
+                <a href="episodes.html" class="btn btn-outline-danger">Episodes</a>
             </div>
         </div>
     </nav>
 
-    <?php include 'includes/header.php'; ?> <!-- Replaced with static content -->
-
-    <!-- Hero -->
-    <div class="hero" style="background-image: url('images/home-bg.jpg'); padding-top: 100px;">
+    <!-- Hero with image -->
+    <div class="hero" style="background-image: url('images/home-bg.jpg');">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-10">
@@ -34,8 +31,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
-                <div class="col-md-4">
+            <!-- Two landscape buttons -->
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
                     <a href="about.html" class="text-decoration-none">
                         <div class="landscape-btn">
                             <h3>About the Series</h3>
@@ -43,19 +41,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <a href="shop.html" class="text-decoration-none">
+
+                <div class="col-md-5">
+                    <a href="episodes.html" class="text-decoration-none">
                         <div class="landscape-btn">
                             <h3>Watch Episodes</h3>
                             <p>Browse our interactive Ancient Greece videos</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="my-library.html" class="text-decoration-none">
-                        <div class="landscape-btn">
-                            <h3>My Library</h3>
-                            <p>Your purchased episodes</p>
                         </div>
                     </a>
                 </div>
@@ -63,14 +54,13 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 The Wonders of Ancient Greece &mdash; part of <a href="https://tobyhall.uk" class="text-warning text-decoration-none">tobyhall.uk</a></p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Cart count
-        function updateCartCount() {
-            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-            document.getElementById('cart-count').textContent = cart.length;
-        }
-        updateCartCount();
-    </script>
 </body>
 </html>
