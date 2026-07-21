@@ -12,7 +12,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🏛️ Ancient Greece</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="images/logo.png" alt="VLTUS" class="nav-logo me-2">🏛️ Ancient Greece</a>
             <div class="ms-auto">
                 <a href="about.html" class="btn btn-outline-dark me-2">About</a>
                 <a href="episodes.html" class="btn btn-outline-danger">Episodes</a>
@@ -39,9 +39,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const episodes = [
-            { number: "Episode one", title: "The Chariot Races", image: "chariot-racing.png", description: "Experience the thrill of ancient Olympic chariot racing." },
-            { number: "Episode two", title: "A Tour Around Acropolis", image: "acropolis.png", description: "Walk through the magnificent Acropolis of Athens." },
-            { number: "Episode three", title: "The Trojan Horse", image: "trojan-horse.png", description: "The legendary story of the fall of Troy." }
+            { number: "Episode one", title: "The Chariot Races", image: "chariot-racing.png", description: "Experience the thrill of ancient Olympic chariot racing.", available: true },
+            { number: "Episode two", title: "A Tour Around Acropolis", image: "acropolis.png", description: "Walk through the magnificent Acropolis of Athens.", available: true },
+            { number: "Episode three", title: "The Trojan Horse", image: "trojan-horse.png", description: "The legendary story of the fall of Troy.", available: true },
+            { number: "Coming soon", title: "The Naval Harbour", image: "naval-harbour.png", description: "Life and trade at a bustling ancient Greek harbour.", available: false },
+            { number: "Coming soon", title: "Spartan Training", image: "spartan-training.png", description: "Inside the legendary agoge of ancient Sparta.", available: false }
         ];
 
         function renderEpisodes() {
@@ -63,6 +65,9 @@
                             <h6 class="text-muted mb-1">${ep.number}</h6>
                             <h5 class="card-title">${ep.title}</h5>
                             <p class="card-text text-muted">${ep.description}</p>
+                            ${ep.available
+                                ? '<small class="text-success d-block mt-2">&#10003; Available now</small>'
+                                : '<span class="text-muted fst-italic mt-2 d-block">Coming Soon</span>'}
                         </div>
                     </div>
                 </div>`;

@@ -40,6 +40,11 @@ footer {
     font-weight: 800;
 }
 
+.nav-logo {
+    height: 34px;
+    width: auto;
+}
+
 /* spacer under fixed navbar */
 .nav-spacer {
     padding-top: 90px;
